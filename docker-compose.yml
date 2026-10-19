@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: color-web
+    ports:
+      - "5065:8000"
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Madrid

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50 text-slate-800">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorPrint - Imprime sin Tinta Negra | color.deft.work</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-full flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Navbar -->
+  <header class="bg-white/80 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-sky-700 to-indigo-800 bg-clip-text text-transparent">ColorPrint</span>
+          <span class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 border border-sky-200">color.deft.work</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Listo para imprimir
+        </span>
+
+        <a href="https://github.com/elswork/color.deft.work" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 hover:border-slate-300 transition shadow-xs">
+          <svg class="w-4 h-4 fill-current text-slate-800" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Instructions -->
+  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    
+    <!-- Hero banner -->
+    <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-950 text-white p-6 sm:p-10 shadow-xl shadow-slate-900/10">
+      <div class="relative z-10 max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-medium text-sky-200">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495ZM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>
+          </svg>
+          ¿Sin tinta negra o cabezal averiado?
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Transforma cualquier documento a color para imprimir sin tinta negra
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Compatible con <strong>PDF, Word, Excel, PowerPoint, LibreOffice, imágenes (JPG, PNG, iPhone HEIC, WEBP, SVG)</strong> y más.
+          El sistema sustituye los trazos negros por <strong>azul marino, cian, borgoña o tu color preferido</strong> para forzar a la impresora a usar sus cartuchos de color.
+        </p>
+
+        <!-- Supported formats badges pill row -->
+        <div class="flex flex-wrap items-center gap-1.5 pt-2 text-xs">
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📄 PDF & XPS</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📝 Word (docx, doc)</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📊 Excel (xlsx, csv)</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📽️ PowerPoint (pptx)</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📱 iPhone HEIC / Fotos</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">🖼️ PNG, JPG, WEBP, SVG</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">📚 ePub & Libros</span>
+        </div>
+      </div>
+
+      <!-- Background decorative circles -->
+      <div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-sky-500/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-16 -top-16 w-80 h-80 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
+    </div>
+
+    <!-- Main Workspace -->
+    <div class="space-y-8">
+
+      <!-- Upload Zone -->
+      <div id="dropzone-container" class="transition-all duration-300">
+        <div id="dropzone" class="relative group cursor-pointer border-2 border-dashed border-slate-300 hover:border-sky-500 rounded-3xl p-8 sm:p-12 bg-white hover:bg-sky-50/50 transition-all text-center flex flex-col items-center justify-center gap-4 shadow-sm hover:shadow-md">
+          <input type="file" id="file-input" class="hidden" accept=".pdf,.docx,.doc,.docm,.dotx,.dot,.odt,.rtf,.xlsx,.xls,.xlsm,.ods,.pptx,.ppt,.potx,.pot,.odp,.txt,.csv,.tsv,.html,.htm,.md,.xps,.oxps,.epub,.cbz,.fb2,.svg,.png,.jpg,.jpeg,.webp,.bmp,.tiff,.tif,.heic,.heif,.avif,.gif,.ico,.psd,.tga">
+          
+          <div class="w-16 h-16 rounded-2xl bg-sky-100 group-hover:bg-sky-200 text-sky-600 flex items-center justify-center transition-transform group-hover:scale-110">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
+            </svg>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-lg font-semibold text-slate-800">
+              Arrastra cualquier documento o imagen aquí
+            </p>
+            <p class="text-sm text-slate-500">
+              PDF, Word, Excel, PowerPoint, Texto, fotos (JPG, PNG, HEIC de iPhone), SVG o ePub
+            </p>
+          </div>
+
+          <div class="inline-flex items-center gap-2 text-xs font-medium text-slate-400 bg-slate-100 px-3 py-1.5 rounded-full">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+            </svg>
+            Procesamiento local 100% privado en tu servidor color.deft.work
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Progress -->
+      <div id="upload-progress" class="hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between text-sm font-medium">
+          <span id="upload-status-text" class="text-slate-700">Subiendo y convirtiendo documento...</span>
+          <span id="upload-percentage" class="text-sky-600">0%</span>
+        </div>
+        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+          <div id="upload-bar" class="bg-sky-600 h-2.5 rounded-full transition-all duration-200" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- App Workspace Panel -->
+      <div id="workspace-panel" class="hidden space-y-8">
+
+        <!-- File Header bar -->
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-xs" id="file-icon-box">
+              DOC
+            </div>
+            <div>
+              <h2 id="current-filename" class="font-bold text-slate-800 text-base sm:text-lg truncate max-w-md">documento.pdf</h2>
+              <p id="current-file-meta" class="text-xs sm:text-sm text-slate-500">1 página detectada</p>
+            </div>
+          </div>
+
+          <button id="btn-change-file" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 text-sm font-medium transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            Cambiar archivo
+          </button>
+        </div>
+
+        <!-- Controls & Preview Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Left Column: Controls (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <!-- Card 1: Color Selection -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                  1. Color de Reemplazo
+                </h3>
+                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-100" id="current-color-badge">#002060</span>
+              </div>
+
+              <!-- Color presets grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="color-presets-container">
+                <!-- Preset: Azul Marino (Default Recommended) -->
+                <button type="button" class="color-preset-btn active group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-sky-600 bg-sky-50/50" data-color="#002060" data-name="Azul Marino">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #002060;"></span>
+                    <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-600 text-white">Top</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Azul Marino</p>
+                    <p class="text-[10px] text-slate-500">Alta legibilidad</p>
+                  </div>
+                </button>
+
+                <!-- Preset: Cian Intenso -->
+                <button type="button" class="color-preset-btn group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-slate-200 hover:border-slate-300 bg-white" data-color="#00558f" data-name="Cian Intenso">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #00558f;"></span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Cian Profundo</p>
+                    <p class="text-[10px] text-slate-500">Nítido y claro</p>
+                  </div>
+                </button>
+
+                <!-- Preset: Borgoña / Magenta -->
+                <button type="button" class="color-preset-btn group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-slate-200 hover:border-slate-300 bg-white" data-color="#6b0f24" data-name="Borgoña">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #6b0f24;"></span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Borgoña</p>
+                    <p class="text-[10px] text-slate-500">Tono rojizo</p>
+                  </div>
+                </button>
+
+                <!-- Preset: Verde Bosque -->
+                <button type="button" class="color-preset-btn group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-slate-200 hover:border-slate-300 bg-white" data-color="#084d22" data-name="Verde Bosque">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #084d22;"></span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Verde Bosque</p>
+                    <p class="text-[10px] text-slate-500">Cian + Amarillo</p>
+                  </div>
+                </button>
+
+                <!-- Preset: Sepia Oscuro -->
+                <button type="button" class="color-preset-btn group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-slate-200 hover:border-slate-300 bg-white" data-color="#42210b" data-name="Sepia">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #42210b;"></span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Sepia Cálido</p>
+                    <p class="text-[10px] text-slate-500">Estilo retro</p>
+                  </div>
+                </button>
+
+                <!-- Preset: Tricromía CMY -->
+                <button type="button" class="color-preset-btn group relative p-3 rounded-2xl border-2 text-left transition flex flex-col justify-between h-24 border-slate-200 hover:border-slate-300 bg-white" data-color="#0d192d" data-name="Tricromía CMY">
+                  <div class="flex items-center justify-between">
+                    <span class="w-6 h-6 rounded-full shadow-inner border border-white/50" style="background-color: #0d192d;"></span>
+                    <span class="text-[9px] font-bold px-1 py-0.5 rounded bg-slate-800 text-white">CMY</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-xs text-slate-900">Negro CMY</p>
+                    <p class="text-[10px] text-slate-500">Sin tinta negra</p>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Custom color selector -->
+              <div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-4">
+                <label for="custom-color-picker" class="text-xs font-semibold text-slate-700 flex items-center gap-2 cursor-pointer">
+                  <span>Color a medida:</span>
+                </label>
+                <div class="flex items-center gap-2">
+                  <input type="color" id="custom-color-picker" value="#002060" class="w-8 h-8 rounded-lg border border-slate-300 cursor-pointer p-0.5 bg-white">
+                  <input type="text" id="custom-color-hex" value="#002060" maxlength="7" class="w-24 px-2 py-1 text-xs font-mono font-semibold border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 uppercase">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Mode & Printing Options -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5">
+              <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                2. Modo de Transformación
+              </h3>
+
+              <div class="space-y-3">
+                <label class="relative flex items-start p-3 rounded-2xl border-2 border-sky-600 bg-sky-50/40 cursor-pointer transition mode-option" id="label-mode-selective">
+                  <input type="radio" name="mode" value="selective" checked class="mt-1 text-sky-600 focus:ring-sky-500">
+                  <div class="ml-3">
+                    <span class="block text-sm font-bold text-slate-900">Solo textos y trazos negros (Inteligente)</span>
+                    <span class="block text-xs text-slate-500 mt-0.5">Conserva logos, sellos rojos o gráficos en color sin alterarlos.</span>
+                  </div>
+                </label>
+
+                <label class="relative flex items-start p-3 rounded-2xl border-2 border-slate-200 hover:border-slate-300 bg-white cursor-pointer transition mode-option" id="label-mode-monochrome">
+                  <input type="radio" name="mode" value="monochrome" class="mt-1 text-sky-600 focus:ring-sky-500">
+                  <div class="ml-3">
+                    <span class="block text-sm font-bold text-slate-900">Monocromático completo (Duotono)</span>
+                    <span class="block text-xs text-slate-500 mt-0.5">Convierte todo el documento en gradientes del color elegido (0% tinta negra).</span>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Fine-tuning options -->
+              <div class="pt-3 border-t border-slate-100 space-y-4">
+                
+                <div class="flex items-center justify-between">
+                  <div>
+                    <label for="clean-bg-checkbox" class="text-xs font-bold text-slate-800 cursor-pointer">Limpiar fondo de papel</label>
+                    <p class="text-[11px] text-slate-500">Blanquea fondos grisáceos de escaneos para ahorrar tinta</p>
+                  </div>
+                  <input type="checkbox" id="clean-bg-checkbox" checked class="w-5 h-5 rounded text-sky-600 focus:ring-sky-500 border-slate-300 cursor-pointer">
+                </div>
+
+                <div class="space-y-1.5">
+                  <div class="flex justify-between items-center text-xs">
+                    <label for="contrast-slider" class="font-bold text-slate-800">Intensidad del texto</label>
+                    <span id="contrast-val-label" class="text-slate-500 font-mono text-[11px]">Normal (+15%)</span>
+                  </div>
+                  <input type="range" id="contrast-slider" min="0.8" max="1.6" step="0.05" value="1.15" class="w-full accent-sky-600 cursor-pointer">
+                  <div class="flex justify-between text-[10px] text-slate-400">
+                    <span>Suave</span>
+                    <span>Óptimo</span>
+                    <span>Muy oscuro</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-1">
+                  <div>
+                    <label class="text-xs font-bold text-slate-800">Calidad de salida</label>
+                    <p class="text-[11px] text-slate-500">Resolución para la impresión final</p>
+                  </div>
+                  <select id="dpi-select" class="text-xs font-semibold bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-700">
+                    <option value="300" selected>300 DPI (Óptima)</option>
+                    <option value="150">150 DPI (Rápida)</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Card 3: Download & Action Buttons -->
+            <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-3xl p-6 text-white shadow-lg shadow-sky-600/20 space-y-4">
+              <h3 class="font-bold text-base flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Descargar e Imprimir
+              </h3>
+              <p class="text-xs text-sky-100 leading-relaxed">
+                Genera tu documento en alta resolución listo para enviar a la impresora.
+              </p>
+
+              <div class="space-y-2.5 pt-2">
+                <!-- PDF download -->
+                <button type="button" id="btn-process-download" class="w-full py-3.5 px-4 rounded-2xl bg-white text-slate-900 font-extrabold text-sm hover:bg-sky-50 transition shadow-md flex items-center justify-center gap-2 group">
+                  <svg class="w-5 h-5 text-sky-600 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span>Descargar PDF Transformado</span>
+                </button>
+
+                <!-- Direct print -->
+                <button type="button" id="btn-print-direct" class="w-full py-3 px-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+                  </svg>
+                  <span>Imprimir Directamente</span>
+                </button>
+
+                <!-- Optional Image download (visible when image uploaded) -->
+                <button type="button" id="btn-download-image" class="hidden w-full py-2.5 px-4 rounded-2xl bg-indigo-900/60 hover:bg-indigo-900 border border-indigo-400/30 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 text-sky-300" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                  </svg>
+                  <span>Descargar Imagen (PNG)</span>
+                </button>
+              </div>
+
+              <!-- Processing Indicator -->
+              <div id="processing-indicator" class="hidden pt-3 border-t border-white/20 space-y-2">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <span id="processing-status">Procesando páginas...</span>
+                  <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Preview (7 cols) -->
+          <div class="lg:col-span-7 space-y-4">
+
+            <!-- Preview Container Card -->
+            <div class="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-sm space-y-4">
+              
+              <!-- Preview Header with Tab Toggle & Page Navigation -->
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
+                
+                <div class="inline-flex rounded-xl bg-slate-100 p-1 text-xs font-bold">
+                  <button type="button" id="tab-recolored" class="px-3.5 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition">
+                    Transformado
+                  </button>
+                  <button type="button" id="tab-original" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+                    Original
+                  </button>
+                </div>
+
+                <div id="page-nav" class="flex items-center gap-2 text-xs font-bold text-slate-700">
+                  <button type="button" id="btn-prev-page" class="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 flex items-center justify-center transition disabled:opacity-30 disabled:cursor-not-allowed">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                  </button>
+                  <span>Página <span id="current-page-num">1</span> de <span id="total-pages-num">1</span></span>
+                  <button type="button" id="btn-next-page" class="w-8 h-8 rounded-lg border border-slate-200 hover:bg-slate-50 flex items-center justify-center transition disabled:opacity-30 disabled:cursor-not-allowed">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Page Display Stage -->
+              <div class="relative min-h-[500px] max-h-[750px] overflow-auto bg-slate-100 rounded-2xl flex items-center justify-center p-4 border border-slate-200" id="preview-stage">
+                
+                <div id="preview-loader" class="hidden absolute inset-0 bg-white/70 backdrop-blur-xs flex flex-col items-center justify-center gap-2 z-20">
+                  <svg class="animate-spin h-8 w-8 text-sky-600" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  <span class="text-xs font-semibold text-slate-600">Actualizando vista previa...</span>
+                </div>
+
+                <img id="preview-image" src="" alt="Vista previa del documento" class="max-w-full max-h-[700px] object-contain rounded-lg shadow-lg bg-white border border-slate-300 transition-opacity duration-200">
+              </div>
+
+              <!-- Tip -->
+              <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                  </svg>
+                  Trazos transformados listos para cartuchos de color
+                </span>
+                <span class="text-[11px] text-slate-400">Previsualización en tiempo real</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <iframe id="print-frame" class="hidden"></iframe>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <div class="flex items-center justify-center gap-3 text-slate-600 font-medium flex-wrap">
+        <span>ColorPrint &copy; 2026</span>
+        <span>&bull;</span>
+        <a href="https://color.deft.work" class="hover:text-sky-600 transition font-semibold">color.deft.work</a>
+        <span>&bull;</span>
+        <a href="https://github.com/elswork/color.deft.work" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-sky-600 transition font-semibold">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>Código Abierto en GitHub</span>
+        </a>
+        <span>&bull;</span>
+        <span class="text-slate-400">Licencia MIT</span>
+      </div>
+      <p class="text-slate-400 text-[11px]">Soporta PDF, Word, Excel, PowerPoint, LibreOffice, fotos de iPhone (HEIC), imágenes y ePub.</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

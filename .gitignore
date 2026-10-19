@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.env*
+add_dns.py
+add_*.py
+test_*.py
+fix_*.py
+check_*.py
+
+# Storage directories
+data/uploads/*
+!data/uploads/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
