@@ -145,12 +145,12 @@ async def health():
     return {"status": "ok", "app": "color.deft.work", "version": "3.0.0"}
 
 
-@app.get("/api/calibration-swatches")
+@app.api_route("/api/calibration-swatches", methods=["GET", "HEAD"])
 async def get_calibration_swatches():
     return {"swatches": CALIBRATION_SWATCHES}
 
 
-@app.get("/api/calibration-sheet")
+@app.api_route("/api/calibration-sheet", methods=["GET", "HEAD"])
 async def get_calibration_sheet(download: bool = Query(False)):
     pdf_bytes = await asyncio.to_thread(generate_calibration_pdf)
     disposition = "attachment" if download else "inline"
