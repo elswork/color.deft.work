@@ -1,0 +1,26 @@
+{
+  "name": "ColorPrint - Imprime sin Tinta Negra",
+  "short_name": "ColorPrint",
+  "description": "Transforma tus documentos e imágenes a perfiles CMY (K=0) para imprimir cuando falla el cartucho o cabezal negro.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/static/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

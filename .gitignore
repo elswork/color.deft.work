@@ -3,11 +3,11 @@ __pycache__/
 *$py.class
 *.env
 .env*
-add_dns.py
-add_*.py
-test_*.py
-fix_*.py
-check_*.py
+/add_dns.py
+/add_*.py
+/test_*.py
+/fix_*.py
+/check_*.py
 
 # Storage directories
 data/uploads/*
@@ -20,3 +20,4 @@ data/outputs/*
 Thumbs.db
 .idea/
 .vscode/
+.pytest_cache/
