@@ -107,6 +107,11 @@ cd color.deft.work
 docker compose up -d --build
 ```
 
+O si prefieres descargar directamente la imagen precompilada desde **GitHub Container Registry**:
+```bash
+docker pull ghcr.io/elswork/color.deft.work:latest
+```
+
 El servicio estará disponible de inmediato en:
 ```
 http://localhost:5065
